@@ -426,6 +426,7 @@ nav a:hover{
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    
 }
 
 .education-icon{
@@ -437,6 +438,7 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 5%;
     
 }
 .education-icon i:hover{
