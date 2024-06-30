@@ -27,9 +27,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     padding: 20px;
     
+}
+.nav-id{
+    z-index:1000;
 }
 
 .logo h1 {
@@ -50,6 +52,10 @@ nav a {
 }
 nav a:hover{
     color: #00ff00;
+}
+.nav-links{
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 /* nav .download-cv {
@@ -79,10 +85,20 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    overflow: hidden;
     /* align-items: center; */
    
    
+}
+.hover-image {
+    width:300px ; 
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.hover-image:hover {
+    transform: scale(1.1);
 }
 
 .hero-btn{
@@ -118,7 +134,7 @@ nav a:hover{
     margin-bottom: 20px;
     font-weight: bold;
 }
-@media (width<900px){
+@media (width<1000px){
     .hero-content h1 {
         
         font-size: 2rem;
@@ -185,7 +201,7 @@ nav a:hover{
         
     }
 }
-@media (width<500px){
+@media (width<900px){
     .social-links a  {
         
     color: #fff;
@@ -202,6 +218,7 @@ nav a:hover{
         
     }
 }
+
 /* ***********Second section****** */
 .about-section {
     display: flex;
@@ -219,11 +236,21 @@ nav a:hover{
     align-items: center;
     
 }
+.container-fluide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+    gap: 20px;
+}
 @media (width<900px){
     .about-content  {
         
         flex-direction: column;
         
+    }
+    .text-content{
+        text-align: justify;
     }
 }
 
@@ -249,11 +276,7 @@ nav a:hover{
     border-radius: 50px;
 }
 
-.download-cv a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
+
 
 .text-content {
     flex: 2;
@@ -293,18 +316,6 @@ nav a:hover{
     margin-bottom: 5px;
 }
 
-.signature {
-    margin-top: 40px;
-}
-
-.signature p {
-    margin-bottom: 5px;
-}
-
-.signature .title {
-    font-size: 14px;
-    color: #888;
-}
 /* *****Experience********* */
 .Experience-section{
     display: flex;
@@ -315,21 +326,29 @@ nav a:hover{
 }
 
 .image-section {
+    width: 100%;
+    height: 100vh;
     flex: 1;
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
 }
 
 .image-section img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+    object-fit: cover;
+
+    
 }
 
 .content-section {
     flex: 1;
     padding: 20px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -342,13 +361,14 @@ nav a:hover{
 }
 
 .content-section h1 {
-    font-size: 36px;
+    font-size: 2em;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .content-section p {
-    color: #555;
-    font-size: 16px;
+    color: #dfdbdb;
+    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -387,11 +407,15 @@ nav a:hover{
 .details h3 {
     font-size: 20px;
     margin: 0 0 5px 0;
+    color: #ddd;
+}
+ul li{
+    color: #00ff00;
 }
 
 .details p {
     font-size: 14px;
-    color: #777;
+    color: #a8a7a7;
     margin: 0;
 }
 /* ********** Third Part******* */
@@ -456,7 +480,7 @@ nav a:hover{
 
 .education-details h3 {
     font-size: 24px;
-    color: #333;
+    color: #9c9898;
     margin: 0 0 10px;
 }
 
@@ -478,12 +502,22 @@ nav a:hover{
     max-width: 400px;
     border-radius: 10px;
 }
-@media (width<900px){
+@media (width<1000px){
     .container {
         
         flex-direction: column;
         
     }
+    .education-header{
+        text-align: justify;
+    }
+    .content-section{
+        text-align: justify;
+    }
+    .container-fluide{
+        flex-direction: column;
+    }
+   
 }
 @keyframes rotateY {
     0% {
@@ -636,6 +670,7 @@ footer {
     min-width: 200px;
     margin: 10px;
     text-align: center;
+    
 }
 
 .footer-logo img {
@@ -694,7 +729,17 @@ footer {
     display: inline-block;
 }
 
-.social-icons img {
+.social-icons img{
     width: 30px;
     height: auto;
+   
+}
+
+/* #footer-icons{
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 5%;
+} */
+#footer-icons a:hover{
+    transform: scale(1.2);
 }
